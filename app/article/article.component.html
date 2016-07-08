@@ -1,0 +1,38 @@
+<div>
+    <h1>{{titre}}</h1>
+
+    <div *ngIf="enrArticle">
+        <!--<div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" required [(ngModel)]="model.nom" name="nom" #nom="ngModel">
+            <span [hidden]="nom.valid" class="alert alert-danger">Vous devez entrer un nom !</span>
+        </div>-->
+        <div class="form-group">
+            <label>id :</label>
+            <input type="text" class="form-control" placeholder="Obligatoire" [(ngModel)]="enrArticle.id">
+            <!-- le lieur -->
+        </div>
+        <div class="form-group">
+            <label for="prenom">Description:</label>
+            <input type="text" class="form-control" [(ngModel)]="enrArticle.Description">
+            <!-- le lieur -->
+        </div>
+        <div class="form-group">
+            <label for="Prix_hors_taxe">Prix :</label>
+            <input type="number" class="form-control" [(ngModel)]="enrArticle.Prix">
+            <!-- le lieur -->
+        </div>
+
+
+        <div>
+            <button (click)="onSubmit()">Valider</button>
+            <button (click)="ajouterClient()" type="button" class="btn btn-default">Nouveau Article</button>
+            <button (click)="supprimerClient()" type="button" class="btn btn-default">Supprimer</button>
+        </div>
+        <div>
+            <button (click)="setPrecedent()" type="button" class="btn btn-default">Rec</button>
+            <button (click)="setSuivant()" type="button" class="btn btn-default">Suivant</button>
+        </div>
+        <button (click)="supprimerTout()" type="button" class="btn btn-default">Supprimer tout</button>
+    </div>
+</div>

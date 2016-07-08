@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script>document.write('<base href="' + document.location + '" />');</script>
+
+<head>
+    <base href="/" />
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
     <title>Exemple Angular2</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,11 +20,14 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-      System.import('app').catch(function(err){ console.error(err); });
+        System.import('app').catch(function(err) {
+            console.error(err);
+        });
     </script>
-  </head>
+</head>
 
-  <body>
+<body>
     <my-app>Loading...</my-app>
-  </body>
+</body>
+
 </html>
